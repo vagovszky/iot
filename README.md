@@ -1,5 +1,5 @@
 # IoT project
-IoT project with usage of ESP8266
+IoT project with usage of ESP8266 - [Wiki page](https://github.com/vagovszky/iot/wiki)
 
 ## Roadmapa - sketch
 
