@@ -1,2 +1,5 @@
 Krabicka H-75/4AA 215,-Kc
 Nodemcu devkit - EBAY - cca 200,-Kc
+LDO Regulator 5V - LF50CV - 25,-Kc
+LED 3MM Green BL-B2141-L - 2,30,-Kc (1,8V / 2mA)
+LED 3MM YELLOW HLMP-1719 - 5,80,- Kc (1,8V / 2mA)
