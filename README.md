@@ -5,7 +5,7 @@ IoT project with usage of ESP8266 - [Wiki page](https://github.com/vagovszky/iot
 
 ### Hardware - Hlavní modul
 
-- [ ] Návrh HW - schema
+- [X] Návrh HW - schema
 - [ ] Návrh HW - DPS
 - [ ] Výroba DPS - Prototyp
 - [ ] Osazení DPS
