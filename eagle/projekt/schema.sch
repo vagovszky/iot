@@ -6136,7 +6136,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="IC3" library="level_shifter" deviceset="LEVEL_SHIFTER" device=""/>
@@ -6145,8 +6144,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="IC4" library="level_shifter" deviceset="LEVEL_SHIFTER" device=""/>
 <part name="SUPPLY2" library="parts" deviceset="VIN" device=""/>
-<part name="SUPPLY3" library="parts" deviceset="VIN" device=""/>
-<part name="SUPPLY4" library="parts" deviceset="3.3V" device=""/>
 <part name="SUPPLY5" library="parts" deviceset="3.3V" device=""/>
 <part name="SUPPLY6" library="parts" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="parts" deviceset="3.3V" device=""/>
@@ -6154,7 +6151,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <part name="SUPPLY9" library="parts" deviceset="5V" device=""/>
 <part name="SUPPLY10" library="parts" deviceset="5V" device=""/>
 <part name="SUPPLY11" library="parts" deviceset="5V" device=""/>
-<part name="SUPPLY12" library="parts" deviceset="5V" device=""/>
 <part name="SUPPLY14" library="parts" deviceset="5V" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -6167,6 +6163,10 @@ grid 5.08 mm, diameter 13 mm</description>
 <part name="SUPPLY15" library="parts" deviceset="5V" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY16" library="parts" deviceset="5V" device=""/>
+<part name="SUPPLY3" library="parts" deviceset="5V" device=""/>
+<part name="SUPPLY4" library="parts" deviceset="VIN" device=""/>
+<part name="SUPPLY12" library="parts" deviceset="3.3V" device=""/>
+<part name="GND10" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6286,7 +6286,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <instance part="GND6" gate="1" x="58.42" y="132.08"/>
 <instance part="GND8" gate="1" x="76.2" y="132.08"/>
 <instance part="GND9" gate="1" x="147.32" y="109.22"/>
-<instance part="GND10" gate="1" x="215.9" y="86.36"/>
 <instance part="GND11" gate="1" x="30.48" y="50.8"/>
 <instance part="GND12" gate="1" x="73.66" y="50.8"/>
 <instance part="IC3" gate="G$1" x="124.46" y="91.44" rot="R180"/>
@@ -6295,8 +6294,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <instance part="GND13" gate="1" x="25.4" y="132.08"/>
 <instance part="IC4" gate="G$1" x="124.46" y="55.88" rot="R180"/>
 <instance part="SUPPLY2" gate="G$1" x="38.1" y="165.1"/>
-<instance part="SUPPLY3" gate="G$1" x="195.58" y="122.555"/>
-<instance part="SUPPLY4" gate="G$1" x="218.44" y="122.555"/>
 <instance part="SUPPLY5" gate="G$1" x="76.2" y="101.6"/>
 <instance part="SUPPLY6" gate="G$1" x="27.94" y="83.82"/>
 <instance part="SUPPLY7" gate="G$1" x="106.68" y="66.04"/>
@@ -6304,7 +6301,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <instance part="SUPPLY9" gate="G$1" x="76.2" y="165.1"/>
 <instance part="SUPPLY10" gate="G$1" x="22.86" y="83.82"/>
 <instance part="SUPPLY11" gate="G$1" x="142.24" y="101.6"/>
-<instance part="SUPPLY12" gate="G$1" x="193.04" y="122.555"/>
 <instance part="SUPPLY14" gate="G$1" x="142.24" y="66.04"/>
 <instance part="GND4" gate="1" x="38.1" y="132.08"/>
 <instance part="GND5" gate="1" x="96.52" y="132.08"/>
@@ -6317,6 +6313,10 @@ grid 5.08 mm, diameter 13 mm</description>
 <instance part="SUPPLY15" gate="G$1" x="167.64" y="165.1"/>
 <instance part="GND14" gate="1" x="167.64" y="132.08"/>
 <instance part="SUPPLY16" gate="G$1" x="147.32" y="165.1"/>
+<instance part="SUPPLY3" gate="G$1" x="193.04" y="119.38"/>
+<instance part="SUPPLY4" gate="G$1" x="195.58" y="119.38"/>
+<instance part="SUPPLY12" gate="G$1" x="215.9" y="119.38"/>
+<instance part="GND10" gate="1" x="215.9" y="86.36"/>
 </instances>
 <busses>
 <bus name="BUS:RST,ADC,D[0..2],D[5..7],RX,TX,GPIO16,GPIO[4..5],GPIO[12..14],GPIO1,GPIO3">
@@ -6452,8 +6452,8 @@ grid 5.08 mm, diameter 13 mm</description>
 </segment>
 <segment>
 <pinref part="PL1" gate="G$1" pin="14"/>
-<wire x1="213.36" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND10" gate="1" pin="GND"/>
+<wire x1="213.36" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="96.52" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -6493,8 +6493,10 @@ grid 5.08 mm, diameter 13 mm</description>
 <wire x1="38.1" y1="162.56" x2="38.1" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="SUPPLY3" gate="G$1" pin="VIN"/>
-<pinref part="SUPPLY3" gate="G$1" pin="VIN"/>
+<pinref part="PL1" gate="G$1" pin="13"/>
+<pinref part="SUPPLY4" gate="G$1" pin="VIN"/>
+<wire x1="198.12" y1="96.52" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="96.52" x2="195.58" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -6539,6 +6541,12 @@ grid 5.08 mm, diameter 13 mm</description>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY16" gate="G$1" pin="5V"/>
 <wire x1="147.32" y1="160.02" x2="147.32" y2="165.1" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PL1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY3" gate="G$1" pin="5V"/>
+<wire x1="198.12" y1="111.76" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="111.76" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -6599,6 +6607,12 @@ grid 5.08 mm, diameter 13 mm</description>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <wire x1="109.22" y1="55.88" x2="106.68" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="55.88" x2="106.68" y2="66.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="PL1" gate="G$1" pin="2"/>
+<pinref part="SUPPLY12" gate="G$1" pin="3.3V"/>
+<wire x1="213.36" y1="111.76" x2="215.9" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="111.76" x2="215.9" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -6903,27 +6917,6 @@ grid 5.08 mm, diameter 13 mm</description>
 <wire x1="198.12" y1="109.22" x2="190.5" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="109.22" x2="187.96" y2="106.68" width="0.1524" layer="91"/>
 <label x="190.5" y="109.22" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<wire x1="193.04" y1="121.92" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="PL1" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="111.76" x2="198.12" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<wire x1="195.58" y1="121.92" x2="195.58" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="PL1" gate="G$1" pin="13"/>
-<wire x1="195.58" y1="96.52" x2="198.12" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<wire x1="218.44" y1="121.92" x2="218.44" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="PL1" gate="G$1" pin="2"/>
-<wire x1="218.44" y1="111.76" x2="213.36" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
