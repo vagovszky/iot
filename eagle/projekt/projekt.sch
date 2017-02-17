@@ -5679,10 +5679,10 @@ grid 5.08 mm, diameter 13 mm</description>
 <packages>
 <package name="LEVEL_SHIFTER">
 <description>Level shifter 5 &lt;=&gt; 3.3V</description>
-<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.2032" layer="20"/>
-<wire x1="6.35" y1="7.62" x2="-6.35" y2="7.62" width="0.2032" layer="20"/>
-<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-7.62" width="0.2032" layer="20"/>
-<wire x1="-6.35" y1="-7.62" x2="6.35" y2="-7.62" width="0.2032" layer="20"/>
+<wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.2032" layer="51"/>
+<wire x1="6.35" y1="7.62" x2="-6.35" y2="7.62" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="7.62" x2="-6.35" y2="-7.62" width="0.2032" layer="51"/>
+<wire x1="-6.35" y1="-7.62" x2="6.35" y2="-7.62" width="0.2032" layer="51"/>
 <pad name="HV1" x="-5.08" y="-6.35" drill="0.8" diameter="1.778" shape="square"/>
 <pad name="HV2" x="-5.08" y="-3.81" drill="0.8" diameter="1.778" shape="square"/>
 <pad name="HV" x="-5.08" y="-1.27" drill="0.8" diameter="1.778" shape="square"/>
