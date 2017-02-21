@@ -1,5 +1,22 @@
-Krabicka H-75/4AA 215,-Kc
-Nodemcu devkit - EBAY - cca 200,-Kc
-LDO Regulator 5V - LF50CV - 25,-Kc
-LED 3MM Green BL-B2141-L - 2,30,-Kc (1,8V / 2mA)
-LED 3MM YELLOW HLMP-1719 - 5,80,- Kc (1,8V / 2mA)
+C1   KONDENZATOR 100n/100V                      
+C2   KONDENZATOR 10u/25V ELYT                  
+C3   KONDENZATOR 100u/25V ELYT                 
+C4   KONDENZATOR 100n/100V                      
+D1   DIODA 1N4004                     
+IC1  ESP12E_DEVKIT (EBAY)       
+IC2  REGULATOR LF50CP TO220H 5V LDO Regulator          
+IC3  LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY)    
+IC4  LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY)   
+J1   KONEKTOR PSH02-02W                 
+LED1 LED 3MM Green BL-B2141-L (1,8V / 2mA)                      
+LED2 LED 3MM YELLOW HLMP-1719 (1,8V / 2mA)                       
+PL1  KONEKTOR PSL14W                 
+R1   REZISTOR 750 SMD 1206 
+R2   REZISTOR 1k6 SMD 1206 
+R3   REZISTOR 56k 1% SMD 1206 
+R4   REZISTOR 110k 1% SMD 1206 
+R5   REZISTOR 470 SMD 1206 
+S1   SPÍNAC DO DPS DIP 02 RED/BLACK          
+S2   MIKROSPÍNAC DO DPS (asi TC-0111-T 13.5MM) - zmerit délku hmatníku
+
+Krabicka H-75/4AA
