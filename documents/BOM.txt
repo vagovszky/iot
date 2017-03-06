@@ -1,22 +1,26 @@
-C1   KONDENZATOR 100n/100V                      
-C2   KONDENZATOR 10u/25V ELYT                  
-C3   KONDENZATOR 100u/25V ELYT                 
-C4   KONDENZATOR 100n/100V                      
-D1   DIODA 1N4004                     
-IC1  ESP12E_DEVKIT (EBAY)       
-IC2  REGULATOR LF50CP TO220H 5V LDO Regulator          
-IC3  LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY)    
-IC4  LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY)   
-J1   KONEKTOR PSH02-02W                 
-LED1 LED 3MM Green BL-B2141-L (1,8V / 2mA)                      
-LED2 LED 3MM YELLOW HLMP-1719 (1,8V / 2mA)                       
-PL1  KONEKTOR PSL14W                 
-R1   REZISTOR 750 SMD 1206 
-R2   REZISTOR 1k6 SMD 1206 
-R3   REZISTOR 56k 1% SMD 1206 
-R4   REZISTOR 110k 1% SMD 1206 
-R5   REZISTOR 470 SMD 1206 
-S1   SPÍNAC DO DPS DIP 02 RED/BLACK          
-S2   MIKROSPÍNAC DO DPS (asi TC-0111-T 13.5MM) - zmerit délku hmatníku
+C1,C4 KONDENZATOR 100n/100V - 2ks                      
+C2    KONDENZATOR 10u/25V ELYT - 1ks                  
+C3    KONDENZATOR 100u/25V ELYT - 1ks                 
+D1    DIODA 1N4004 - 1ks                     
+IC1   ESP12E_DEVKIT (EBAY) - 0ks       
+IC2   REGULATOR LF50CP TO220H 5V LDO Regulator - 1ks          
+IC3   LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY) - 0ks    
+IC4   LEVEL_SHIFTER Level shifter 5V <-> 3.3V (EBAY) - 0ks   
+J1    KONEKTOR PSH02-02W + OPACNÝ DÍL + PINY - 1ks                
+LED1  LED 3MM Green BL-B2141-L (1,8V / 2mA) - 1ks                      
+LED2  LED 3MM YELLOW HLMP-1719 (1,8V / 2mA) - 1ks                       
+PL1   KONEKTOR PSL14W - 1ks                 
+R1    REZISTOR 750 SMD 1206 - 2ks 
+R2    REZISTOR 1k6 SMD 1206 - 2ks 
+R3    REZISTOR 56k 1% SMD 1206 - 2ks 
+R4    REZISTOR 110k 1% SMD 1206 - 2ks 
+R5    REZISTOR 470 SMD 1206 - 2ks 
+S1    SPÍNAC DO DPS DIP 02 RED/BLACK - 1ks          
+S2    MIKROSPINAC DO DPS (asi TC-0111-T 13.5MM) - zmmerit delku hmatniku - 1ks
+S3    POSUVNY SPINAC JEDNOPOLOVY CERNY DO PANELU - 1ks
 
-Krabicka H-75/4AA
+Objímka pro led 3mm do panelu (reflektor / sokl) - 2ks
+KONEKTOR PFL14 (NA KABEL) + TRMEN - 4ks
+
+Krabicka H-75/4AA - 0ks
+Plochý kabel - 14 žil - 1m
