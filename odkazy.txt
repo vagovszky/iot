@@ -1,0 +1,2 @@
+Rozireni poctu IO
+- https://primalcortex.wordpress.com/2015/08/21/nodemcu-and-i2c-how-to-start-and-using-the-pcf8574a-i2c-port-expander-on-esp-01-board/
