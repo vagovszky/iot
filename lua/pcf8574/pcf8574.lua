@@ -2,7 +2,7 @@
 
 local M={}
 
-M.addr=0x38
+M.addr=0x20
 
 -- No registers here, so read/write is extremely simple
 M.read = function()
@@ -16,8 +16,9 @@ end
 M.write = function(data)
     i2c.start(0)
     i2c.address(0, M.addr, i2c.TRANSMITTER)
-    i2c.write(0, data)
+    local bytes = i2c.write(0, data)
     i2c.stop(0)
+    return bytes
 end
 
 return M

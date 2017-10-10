@@ -28,8 +28,8 @@ humidity.animationSpeed = 32; // set animation speed (32 is default value)
 humidity.set(0); // set actual value
 
 var wifi = new Gauge(document.getElementById('wifi')).setOptions(opts);
-wifi.maxValue = 80; // set max gauge value
-wifi.setMinValue(0);  // Prefer setter over gauge.minValue = 0
+wifi.maxValue = 100; // set max gauge value
+wifi.setMinValue(20);  // Prefer setter over gauge.minValue = 0
 wifi.animationSpeed = 32; // set animation speed (32 is default value)
 wifi.set(0); // set actual value
 
@@ -42,7 +42,7 @@ window.WebSocket = window.WebSocket || window.MozWebSocket;
 
 if ("WebSocket" in window) {
 
-    var ws = new WebSocket('ws://localhost:1880/ws/application');
+    var ws = new WebSocket('ws://iot-hub:1880/ws/application');
 
     ws.onerror = function (event) {
         alert("Websockets - nastala chyba...")
