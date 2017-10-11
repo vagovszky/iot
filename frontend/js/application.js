@@ -46,13 +46,19 @@ if ("WebSocket" in window) {
 
     ws.onerror = function (event) {
         alert("Websockets - nastala chyba...")
+        applicationViewModel.setConnected(false);
     }
     ws.onmessage = function (message) {
         try {
             var json = JSON.parse(message.data);
-            applicationViewModel.setTemperature(json.temperature);
-            applicationViewModel.setHumidity(json.humidity);
-            applicationViewModel.setWifi(json.wifi);
+            if(json.topic == 'iotmodule/sensors') {
+                applicationViewModel.setTemperature(json.temperature);
+                applicationViewModel.setHumidity(json.humidity);
+                applicationViewModel.setWifi(json.wifi);
+                applicationViewModel.setRegister(json.register);
+            }else if(json.topic == 'iotmodule/input'){
+                applicationViewModel.triggerInput(json.bit);
+            }
         } catch (e) {
             console.log('Format dat neni spravny: ', message.data);
             return;
@@ -60,10 +66,13 @@ if ("WebSocket" in window) {
     };
     ws.onopen = function()
     {
+        applicationViewModel.setWebSocket(ws);
+        applicationViewModel.setConnected(true);
         console.log('Pripojeno pres Websockets...');
     };
     ws.onclose = function()
     {
+        applicationViewModel.setConnected(false);
         console.log('Odpojeno od Websockets...');
     };
     window.onbeforeunload = function(event) {
@@ -72,4 +81,3 @@ if ("WebSocket" in window) {
 }else{
     alert("Vas browser nepodporuje WebSockets!");
 }
-

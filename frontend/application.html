@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/knockout.setAt.plugin.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/knockstrap.min.js"></script>
@@ -40,7 +41,7 @@
 
     <h1 class="my-4">
         Ukázková aplikace
-        <small>Zobrazení dat ze senzorů</small>
+        <small>Uživatelská aplikace zobrazující data ze senzorů a I/O modulu - <span data-bind="text: connected() ? 'PŘIPOJENO' : 'ODPOJENO', css: connected() ? 'text-success' : 'text-danger'"></span></small>
     </h1>
 
     <div class="row">
@@ -91,22 +92,13 @@
 
     <hr>
 
-    <!--
-
     <h1 class="my-4">
         <small>Výstupy</small>
     </h1>
     <div class="row">
         <div class="col-md-12 text-center">
-            <div class="btn-group" role="group" aria-label="buttons-output">
-                <button type="button" class="btn btn-default btn-lg">0</button>
-                <button type="button" class="btn btn-default btn-lg">1</button>
-                <button type="button" class="btn btn-default btn-lg">2</button>
-                <button type="button" class="btn btn-default btn-lg">3</button>
-                <button type="button" class="btn btn-default btn-lg">4</button>
-                <button type="button" class="btn btn-default btn-lg">5</button>
-                <button type="button" class="btn btn-default btn-lg">6</button>
-                <button type="button" class="btn btn-default btn-lg">7</button>
+            <div class="btn-group" role="group" aria-label="buttons-output" data-bind="foreach: output">
+                <button type="button" class="btn btn-lg" data-bind="text: $index, css: $data == 1 ? 'btn-danger' : 'btn-default', click: $parent.setOutput.bind(null, $index(), $data)"></button>
             </div>
         </div>
     </div>
@@ -118,22 +110,13 @@
     </h1>
     <div class="row">
         <div class="col-md-12 text-center">
-            <div class="btn-group" role="group" aria-label="buttons-output">
-                <button type="button" class="btn btn-danger btn-lg" disabled="disabled">0</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">1</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">2</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">3</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">4</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">5</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">6</button>
-                <button type="button" class="btn btn-default btn-lg" disabled="disabled">7</button>
+            <div class="btn-group" role="group" aria-label="buttons-output" data-bind="foreach: input">
+                <button type="button" class="btn btn-lg" disabled="disabled" data-bind="text: $index, css: $data == 1 ? 'btn-danger' : 'btn-default'"></button>
             </div>
         </div>
     </div>
 
     <hr>
-
-    -->
 
     <footer>
         <p>&copy; Martin Vágovszký</p>
