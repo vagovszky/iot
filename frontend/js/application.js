@@ -29,7 +29,7 @@ humidity.set(0); // set actual value
 
 var wifi = new Gauge(document.getElementById('wifi')).setOptions(opts);
 wifi.maxValue = 100; // set max gauge value
-wifi.setMinValue(20);  // Prefer setter over gauge.minValue = 0
+wifi.setMinValue(0);  // Prefer setter over gauge.minValue = 0
 wifi.animationSpeed = 32; // set animation speed (32 is default value)
 wifi.set(0); // set actual value
 

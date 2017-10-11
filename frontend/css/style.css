@@ -34,11 +34,11 @@ div.container a.navbar-brand > img {
 
 .gauge > .value{
     position: absolute;
-    top: 80px; left: 0; right: 0;
-    font-size: 1.6em; font-weight: bold;
+    top: -20px; left: 0; right: 0;
+    font-size: 2.2em; font-weight: bold;
     color: black; font-family: 'Amaranth', sans-serif;
 }
 
 .my-4 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }

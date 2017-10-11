@@ -22,21 +22,25 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
     }
 
     self.setTemperature = function(temperature){
+        temperature = parseInt(temperature);
         self.temperature(temperature);
         temperatureGauge.set(temperature);
     }
 
     self.setHumidity = function(humidity){
-        self.humidity(humidity)
+        humidity = parseInt(humidity);
+        self.humidity(humidity);
         humidityGauge.set(humidity);
     }
 
     self.setWifi = function(wifi){
+        wifi = parseInt(wifi);
         self.wifi(wifi);
         wifiGauge.set(wifi);
     }
 
     self.setRegister = function(register){
+        register = parseInt(register);
         for (var i = 0; i < 8; i++){
             var bit = (register >> i) & 1;
             self.output.setAt(i , ((bit == 0) ? 1 : 0 ));
@@ -44,12 +48,15 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
     }
 
     self.triggerInput = function(index){
+        index = parseInt(index);
         self.input.setAt(index, 1);
         setTimeout(function(){ self.input.setAt(index, 0); }, 1000);
     }
 
     self.setOutput = function(index, value){
         var newVal = 0;
+        index = parseInt(index);
+        value = parseInt(value);
 
         if(value == 1) {
             self.output.setAt(index, 0);
