@@ -48,6 +48,7 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
     }
 
     self.triggerInput = function(index){
+        console.log('Zmacknuto tlacitko na IoT Modulu: '+index);
         index = parseInt(index);
         self.input.setAt(index, 1);
         setTimeout(function(){ self.input.setAt(index, 0); }, 1000);
@@ -58,6 +59,8 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
         index = parseInt(index);
         value = parseInt(value);
 
+        console.log('Zmacknuto tlacitko na strance: '+index+', hodnota: ' + (value == 1 ? 0 : 1));
+        
         if(value == 1) {
             self.output.setAt(index, 0);
         }else{

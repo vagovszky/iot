@@ -51,6 +51,7 @@ if ("WebSocket" in window) {
     ws.onmessage = function (message) {
         try {
             var json = JSON.parse(message.data);
+            console.log("Data: " + message.data);
             if(json.topic == 'iotmodule/sensors') {
                 applicationViewModel.setTemperature(json.temperature);
                 applicationViewModel.setHumidity(json.humidity);
