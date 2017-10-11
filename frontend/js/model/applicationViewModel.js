@@ -4,8 +4,8 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
 
     self.websocket = null;
 
-    self.temperature = ko.observable(0);
-    self.humidity = ko.observable(0);
+    self.temperature = ko.observable(0.00).extend({numeric: 1});
+    self.humidity = ko.observable(0.00).extend({numeric: 1});
     self.wifi = ko.observable(0);
 
     self.connected = ko.observable(false);
@@ -22,13 +22,13 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
     }
 
     self.setTemperature = function(temperature){
-        temperature = parseInt(temperature);
+        temperature = parseFloat(temperature);
         self.temperature(temperature);
         temperatureGauge.set(temperature);
     }
 
     self.setHumidity = function(humidity){
-        humidity = parseInt(humidity);
+        humidity = parseFloat(humidity);
         self.humidity(humidity);
         humidityGauge.set(humidity);
     }
