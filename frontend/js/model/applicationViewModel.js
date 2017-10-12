@@ -58,7 +58,7 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
         var newVal = 0;
         index = parseInt(index);
         value = parseInt(value);
-
+        
         console.log('Zmacknuto tlacitko na strance: '+index+', hodnota: ' + (value == 1 ? 0 : 1));
         
         if(value == 1) {

@@ -42,7 +42,7 @@ window.WebSocket = window.WebSocket || window.MozWebSocket;
 
 if ("WebSocket" in window) {
 
-    var ws = new WebSocket('ws://iot-hub:1880/ws/application');
+    var ws = new WebSocket('ws://192.168.0.1:1880/ws/application');
 
     ws.onerror = function (event) {
         alert("Websockets - nastala chyba...")
