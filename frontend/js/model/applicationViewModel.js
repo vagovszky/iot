@@ -58,7 +58,7 @@ function ApplicationViewModel(temperatureGauge, humidityGauge, wifiGauge){
 
     self.setRegister = function(register){
         register = parseInt(register);
-        for (var index = 0; index < 8; i++){
+        for (var index = 0; index < 8; index++){
             var bit = (register >> index) & 1;
             //self.output.setAt(i , ((bit == 0) ? 1 : 0 ));
             self.output()[index]((bit == 0) ? 1 : 0 );
