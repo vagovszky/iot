@@ -38,6 +38,7 @@ var applicationViewModel = new ApplicationViewModel(temperature, humidity, wifi)
 ko.applyBindings(applicationViewModel);
 
 // Websocket handling
+
 window.WebSocket = window.WebSocket || window.MozWebSocket;
 
 if ("WebSocket" in window) {
