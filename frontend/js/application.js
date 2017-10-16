@@ -51,16 +51,19 @@ if ("WebSocket" in window) {
     }
     ws.onmessage = function (message) {
         try {
+            
             var json = JSON.parse(message.data);
             console.log("Data: " + message.data);
-            if(json.topic == 'iotmodule/sensors') {
-                applicationViewModel.setTemperature(json.temperature);
-                applicationViewModel.setHumidity(json.humidity);
-                applicationViewModel.setWifi(json.wifi);
-                applicationViewModel.setRegister(json.register);
-            }else if(json.topic == 'iotmodule/input'){
-                applicationViewModel.triggerInput(json.bit);
+            
+            if(json.hasOwnProperty('temperature') && json.hasOwnProperty('humidity') && json.hasOwnProperty('wifi') && json.hasOwnProperty('register')) {
+                applicationViewModel.setTemperature(parseFloat(json.temperature).toFixed(1));
+                applicationViewModel.setHumidity(parseFloat(json.humidity).toFixed(1));
+                applicationViewModel.setWifi(Math.abs(parseInt(json.wifi)));
+                applicationViewModel.setRegister(parseInt(json.register));
+            }else if(json.hasOwnProperty('bit')){
+                applicationViewModel.triggerInput(parseInt(json.bit));
             }
+            
         } catch (e) {
             console.log('Format dat neni spravny: ', message.data);
             return;
