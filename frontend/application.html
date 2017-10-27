@@ -98,7 +98,7 @@
             <div class="text-center">
                 <div class="btn-group btn-group-justified" role="group" aria-label="buttons-output" data-bind="foreach: output">
                     <div class="btn-group" role="group">
-                        <input type="button" class="btn btn-lg" data-bind="value: $index, css: $data == 1 ? 'btn-danger' : 'btn-default', click: $parent.setOutput.bind(null, $index(), $data)" />
+                        <input type="button" class="btn btn-lg" data-bind="value: $index, css: $data == 1 ? 'btn-danger' : 'btn-default', click: $parent.setOutput.bind(null, $index(), $data), enable: $parent.connected" />
                     </div>
                 </div>
             </div>
