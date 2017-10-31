@@ -44,6 +44,7 @@ function setup()
     end
     -- Handle incomming messages (pin sets)
     m:on("message", function(m,topic,data) 
+        gpio.write(MQTT_STATUS_LED, gpio.HIGH)
         print(topic .. " " .. data)
         if pcf8574enabled and topic == 'iotmodule/output' then
             local dataJson = sjson.decode(data)
@@ -57,6 +58,7 @@ function setup()
                 pcf8574.write(register)
             end 
         end
+        tmr.create():alarm(200, tmr.ALARM_SINGLE, function() gpio.write(MQTT_STATUS_LED, gpio.LOW) end)
     end)
     -- Wifi starting
     print("Starting wifi...")
@@ -98,9 +100,11 @@ function main()
                             break
                         end
                     end
+                    gpio.write(MQTT_STATUS_LED, gpio.HIGH)
                     m:publish('iotmodule/input', sjson.encode(res) ,0,0, function(client)
                         print('iotmodule/input '..sjson.encode(res)) 
                     end)
+                    tmr.create():alarm(200, tmr.ALARM_SINGLE, function() gpio.write(MQTT_STATUS_LED, gpio.LOW) end)
                 end
             end
         end)
@@ -123,8 +127,9 @@ function main()
             end
             sensorData.wifi = wifi.sta.getrssi()
             gpio.write(MQTT_STATUS_LED, gpio.HIGH)
-            print('iotmodule/sensors '..sjson.encode(sensorData))
-            m:publish('iotmodule/sensors', sjson.encode(sensorData) ,0,0)
+            m:publish('iotmodule/sensors', sjson.encode(sensorData) ,0,0, function(client)
+                print('iotmodule/sensors '..sjson.encode(sensorData))
+            end)
             tmr.create():alarm(200, tmr.ALARM_SINGLE, function() gpio.write(MQTT_STATUS_LED, gpio.LOW) end)
         end)
     end)
