@@ -14,6 +14,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/knockstrap.min.js"></script>
     <script src="js/model/robotViewModel.js"></script>
+    <style>
+      button {padding: 12px 24px !important;}
+    </style>
 </head>
 <body>
 
@@ -45,31 +48,31 @@
 
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'up'), mousedown: buttonPressed.bind($data, 'up') }">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'up'), mousedown: buttonPressed.bind($data, 'up'), touchend: buttonReleased.bind($data, 'up'), touchstart: buttonPressed.bind($data, 'up') }">
                 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" style="font-size: 5em;"></span>
             </button>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'left'), mousedown: buttonPressed.bind($data, 'left') }">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'left'), mousedown: buttonPressed.bind($data, 'left'), touchend: buttonReleased.bind($data, 'left'), touchstart: buttonPressed.bind($data, 'left') }">
                 <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" style="font-size: 5em;"></span>
             </button>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'stop'), mousedown: buttonPressed.bind($data, 'stop') }">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'stop'), mousedown: buttonPressed.bind($data, 'stop'), touchend: buttonReleased.bind($data, 'stop'), touchstart: buttonPressed.bind($data, 'stop') }">
                 <span class="glyphicon glyphicon-stop" aria-hidden="true" style="font-size: 5em;"></span>
             </button>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4 text-left">
-            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'right'), mousedown: buttonPressed.bind($data, 'right') }">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'right'), mousedown: buttonPressed.bind($data, 'right'), touchend: buttonReleased.bind($data, 'right'), touchstart: buttonPressed.bind($data, 'right') }">
                 <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="font-size: 5em;"></span>
             </button>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'down'), mousedown: buttonPressed.bind($data, 'down') }">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'down'), mousedown: buttonPressed.bind($data, 'down'), touchend: buttonReleased.bind($data, 'down'), touchstart: buttonPressed.bind($data, 'down') }">
                 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" style="font-size: 5em;"></span>
             </button>
         </div>
