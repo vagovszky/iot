@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>IoT Hub</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -13,6 +13,7 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/knockstrap.min.js"></script>
+    <script src="js/model/robotViewModel.js"></script>
 </head>
 <body>
 
@@ -36,35 +37,41 @@
     </div>
 </nav>
 <div class="container">
-     <div class="row">
+
+    <h1 class="my-4">
+        Řízení robota
+        <small><span data-bind="text: connected() ? 'PŘIPOJENO' : 'ODPOJENO', css: connected() ? 'text-success' : 'text-danger'"></span></small>
+    </h1>
+
+    <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" style="font-size: 5em;"></span>
-             </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'up'), mousedown: buttonPressed.bind($data, 'up') }">
+                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" style="font-size: 5em;"></span>
+            </button>
         </div>
-        </div>
-      <div class="row">
+    </div>
+    <div class="row">
         <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-          <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" style="font-size: 5em;"></span>
-             </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'left'), mousedown: buttonPressed.bind($data, 'left') }">
+                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" style="font-size: 5em;"></span>
+            </button>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-          <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span class="glyphicon glyphicon-stop" aria-hidden="true" style="font-size: 5em;"></span>
-             </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'stop'), mousedown: buttonPressed.bind($data, 'stop') }">
+                <span class="glyphicon glyphicon-stop" aria-hidden="true" style="font-size: 5em;"></span>
+            </button>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4 text-left">
-          <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="font-size: 5em;"></span>
-             </button>
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'right'), mousedown: buttonPressed.bind($data, 'right') }">
+                <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="font-size: 5em;"></span>
+            </button>
         </div>
-       </div>
-       <div class="row">
-         <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-          <button type="button" class="btn btn-default" aria-label="Left Align">
-             <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" style="font-size: 5em;"></span>
-             </button>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            <button type="button" class="btn btn-default" aria-label="Left Align" data-bind="event: { mouseup: buttonReleased.bind($data, 'down'), mousedown: buttonPressed.bind($data, 'down') }">
+                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" style="font-size: 5em;"></span>
+            </button>
         </div>
     </div>
     <hr>
@@ -72,6 +79,8 @@
         <p>&copy; Martin Vágovszký</p>
     </footer>
 </div>
+
+<script type="text/javascript" src="js/robot.js"></script>
 
 </body>
 </html>
