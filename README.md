@@ -16,3 +16,11 @@ IoT project with usage of ESP8266 - [Wiki page](https://github.com/vagovszky/iot
 
 - [X] Modul cidlo teploty
 - [X] Modul I/O
+
+## Výsledná sestava
+
+![Sestava](https://github.com/vagovszky/iot/blob/master/images/fotky/sestava.jpg)
+
+## Screenshot z webové aplikace k ovládání modulu
+
+![Screenshot](https://github.com/vagovszky/iot/blob/master/images/hardware/application.png)
