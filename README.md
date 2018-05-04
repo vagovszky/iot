@@ -3,24 +3,24 @@ IoT project with usage of ESP8266 - [Wiki page](https://github.com/vagovszky/iot
 
 ## Roadmapa - sketch
 
-### Hardware - Hlavní modul
+### Hardware - HlavnÃ­ modul
 
-- [X] Návrh HW - schema (únor 2017)
-- [X] Návrh HW - DPS (únor 2017)
-- [X] Vıroba DPS - Prototyp (únor 2017)
-- [X] Osazení DPS (brezen 2017)
-- [X] Celková kompletace modulu (brezen 2017)
-- [X] Základní otestování (brezen 2017)
+- [X] NÃ¡vrh HW - schema (Ãºnor 2017)
+- [X] NÃ¡vrh HW - DPS (Ãºnor 2017)
+- [X] VÃ½roba DPS - Prototyp (Ãºnor 2017)
+- [X] OsazenÃ­ DPS (brezen 2017)
+- [X] CelkovÃ¡ kompletace modulu (brezen 2017)
+- [X] ZÃ¡kladnÃ­ otestovÃ¡nÃ­ (brezen 2017)
 
-### Hardware - Prídavné moduly
+### Hardware - PÅ™Ã­davnÃ© moduly
 
-- [X] Modul cidlo teploty
+- [X] Modul Äidlo teploty
 - [X] Modul I/O
 
-## Vısledná sestava
+## VÃ½slednÃ¡ sestava
 
 ![Sestava](https://github.com/vagovszky/iot/blob/master/images/fotky/sestava.jpg)
 
-## Screenshot z webové aplikace k ovládání modulu
+## Screenshot z webovÃ© aplikace k ovlÃ¡dÃ¡nÃ­ modulu
 
 ![Screenshot](https://github.com/vagovszky/iot/blob/master/images/hardware/application.png)
