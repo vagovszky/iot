@@ -14,6 +14,5 @@ IoT project with usage of ESP8266 - [Wiki page](https://github.com/vagovszky/iot
 
 ### Hardware - Prídavné moduly
 
-- [ ] Modul cidlo teploty
-- [ ] Modul I/O
-- [ ] Relé modul
+- [X] Modul cidlo teploty
+- [X] Modul I/O
